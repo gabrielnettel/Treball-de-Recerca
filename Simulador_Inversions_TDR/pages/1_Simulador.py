@@ -247,7 +247,7 @@ with col1:
             elif sector_seleccionat == "Consum":
                 empresa_seleccionada = st.selectbox(
                 label = "Tria l'empresa",
-                options=["Walmart","Nestlé","Coca-Cola","PepsiCo","Procter&Gamble"],
+                options=["Walmart","Nestlé","Coca-Cola","PepsiCo","Procter & Gamble"],
                 on_change=canvi_empresa
                 )
            
