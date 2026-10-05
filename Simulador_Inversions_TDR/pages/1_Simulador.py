@@ -1675,8 +1675,8 @@ if st.session_state.simulació_realitzada==True:
                 "Energia":["ExxonMobil","Chevron","NextEra Energy","AES","EQT"],
                 "Salut":["UnitedHealth Group","McKesson","CVS Health","Amgen","Pfizer"],
                 "Inmobiliari":["D.R. Horton","Lennar","Hovnanian Enterprises","PulteGroup","Toll Brothers"],
-                "Automoció":["Volkswagen","Toyota   ","PACCAR","Ford","Honda"],
-                "Consum":["Walmart","Nestlé","Coca-Cola","PepsiCo","Procter&Gamble"]}#Creem això per a que ens deixi posar les mepreses i el sector al for, busacsr video
+                "Automoció":["Volkswagen","Toyota","PACCAR","Ford","Honda"],
+                "Consum":["Walmart","Nestlé","Coca-Cola","PepsiCo","Procter & Gamble"]}
 
         # Es crea una llista per emmagatzemar les empreses seleccionades
         empreses_seleccionades=[]
@@ -1882,21 +1882,21 @@ if st.session_state.simulació_realitzada==True:
                                         preu_tancament_dia=dades_simulació.loc[dates_DIS_act,"Close"]
 
                                         # Es calcula el valor de les accions de l'empresa en cada dia
-                                        valor_inversió_dia=accions_comprades*preu_tancament_dia #las acciones no canvian, canvia su precio. EX:10 acciones, precio dia 2: 1100, 10 *110$, dia 3: 900, 10*90$
+                                        valor_inversió_dia=accions_comprades*preu_tancament_dia 
 
                                         # S'afegeix el valor diari a la llista corresponent
-                                        valors_de_cada_empresa.append(valor_inversió_dia) # valors_de_cada_empresa ↓ [6000, 6050, 5900, 6100]
+                                        valors_de_cada_empresa.append(valor_inversió_dia) 
 
 
                                 # S'afegeixen els valors de l'empresa a la llista que conté totes les empreses   
                                 empreses_seleccionades.append(valors_de_cada_empresa) 
 
                                 # S'associa cada empresa amb la seva evolució de capital dins del diccionari
-                                dades_gràfic_empreses_individual[empresa]=valors_de_cada_empresa # aqui ponemos empresa porque asi cada vuelta detecta en que empresa esta en esa vuelta, si pusiera "APPLE" estaria mal
+                                dades_gràfic_empreses_individual[empresa]=valors_de_cada_empresa 
                                 
 
                         # Es crea un DataFrame amb l'evolució individual de cada empresa
-                        taula_de_cada_empresa_individual=pd.DataFrame( # No cal un diccionari perque ja tinc els nombs de les columnes
+                        taula_de_cada_empresa_individual=pd.DataFrame( 
                         dades_gràfic_empreses_individual)
 
                         # Es crea una columna amb les dates comunes corresponents als valors de cada empresa
@@ -1920,10 +1920,10 @@ if st.session_state.simulació_realitzada==True:
                                             for empresa in empreses_seleccionades:
 
                                                 # S'afegeix el valor de cada empresa corresponent al dia actual
-                                                capital_invertit_dia= capital_invertit_dia+ empresa[i] # [2000, 2000, 2200], valor de esta empresa en este dia
+                                                capital_invertit_dia= capital_invertit_dia+ empresa[i] 
 
                                             # S'afegeix el capital total del dia a la llista corresponent   
-                                            capital_total_invertit.append(capital_invertit_dia)# tiene que estar fuera porque queremos guardar una solo suma por dia, no una suma por cada empresa
+                                            capital_total_invertit.append(capital_invertit_dia)
                                 
                                     
                         # Es crea un DataFrame amb l'evolució del capital total i les dates 
