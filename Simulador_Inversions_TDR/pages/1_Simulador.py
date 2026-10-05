@@ -95,7 +95,7 @@ diccionari_tickers= {
     "Volkswagen": "VWAGY","Toyota": "TM","PACCAR": "PCAR","Ford": "F","Honda": "HMC",
 
     # Consum
-    "Wallmart": "WMT","Nestlé": "NSRGY","Coca-Cola": "KO","PepsiCo": "PEP","Procter & Gamble": "PG",
+    "Walmart": "WMT","Nestlé": "NSRGY","Coca-Cola": "KO","PepsiCo": "PEP","Procter & Gamble": "PG",
     }
 # https://www.w3schools.com/python/python_dictionaries.asp 
 
@@ -500,7 +500,7 @@ if st.session_state.simulació_realitzada==True:
              "Data": dates_buy_hold
         })
         # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.from_dict.html 
-
+        
         
         # CÀLCULS DE BUY&HOLD 
         # Es calcula el valor final de la inversió a partir del nombre d'accions i del preu final
